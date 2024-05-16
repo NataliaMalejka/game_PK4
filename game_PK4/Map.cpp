@@ -10,12 +10,15 @@ void Map::readMap()
 
             if (pixelColor == sf::Color(0, 0, 0))
             {
-                bricks.push_back(new Brick{ (float)x, (float)y });
+                bricks.push_back(new Brick{ "images/cegla.png", (float)x, (float)y, false });
             }
             else if (pixelColor == sf::Color(237, 28, 36))
             {
                 playerPosition = { float(x), float(y) };
-               // gracz.setPosition((float)x * blockWidth, (float)y * blockHeight);
+            }
+            else if (pixelColor == sf::Color(0, 162, 232))
+            {
+                bricks.push_back(new Brick{ "images/teleport.png", (float)x, (float)y, true });
             }
         }
     }

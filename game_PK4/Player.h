@@ -1,4 +1,8 @@
 #pragma once
+
+#ifndef PLAYER_H
+#define PLAYER_H
+
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
@@ -10,6 +14,11 @@
 #include <SFML/Window.hpp>
 #include <SFML/Network.hpp>
 
+#include "Map.h"
+
+class Map;
+
+enum PLAYER_ANIMATION_STATES { IDLE = 0, MOVING_LEFT, MOVING_RIGHT, JUMPING, FALLING };
 
 class Player
 {
@@ -17,12 +26,13 @@ private:
 	sf::Texture texture;
 	sf::Sprite sprite;
 
+	short animState;
+	sf::IntRect currentFrame;
+	sf::Clock animationTimer;
+
 	sf::Vector2f velocity;
-	sf::Vector2f velocityMax;
-	float velocityMin;
-	float gravity;
-	float acceleration;
-	float drag;
+
+	sf::Vector2f vel;
 
 public:
 	Player();
@@ -34,15 +44,15 @@ public:
 
 	const sf::Vector2f getVelocity() const;
 
-	void updateMovement();
+	void updateMovement(Map* map, bool& newMap);
 	void move(const float dir_x, const float dir_y);
-	void updatePhysics();
-	void jump();
 	bool canJump;
 
-	void update();
+	void updateAnimations();
+	void update(Map* map, bool& newMap);
 
 	void render(sf::RenderTarget* target);
 
 };
 
+#endif

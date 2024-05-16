@@ -1,6 +1,12 @@
 #pragma once
+
+#ifndef MAP_H
+#define MAP_H
+
 #include "Player.h"
 #include "Brick.h"
+
+class Brick;
 
 class Map
 {
@@ -21,3 +27,4 @@ public:
 	void render(sf::RenderTarget* target);
 };
 
+#endif

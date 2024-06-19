@@ -1,32 +1,30 @@
 #include "Brick.h"
 
-Brick::Brick(const std::string& fileName, float x, float y, bool t)
+Brick::Brick(const float& x, const float& y)
 {
-	if (!texture.loadFromFile(fileName))
+	if (!texture.loadFromFile("images/Brick.png"))
 	{
 		std::cout << "ERROR::BRICK::BRICK" << std::endl;
 	}
-	teleport = t;
+
 	sprite.setTexture(texture);
+	
 	sprite.setPosition((float)x * texture.getSize().x, (float)y * texture.getSize().y);
 }
 
-Brick::~Brick()
+void Brick::isIntersectsX(sf::Sprite& sprite, sf::Vector2f& velocity, bool& newMap, sf::Vector2f& beforeJump)
 {
-
+	sprite.move(-velocity.x, 0.f);
 }
 
-const bool Brick::getTeleport()
+void Brick::isIntersectsY(sf::Sprite& sprite, sf::Vector2f& velocity, bool& newMap, bool& canJump, sf::Vector2f& beforeJump)
 {
-	return teleport;
-}
+	if (velocity.y > 0.f)
+	{
+		canJump = true;
+		beforeJump = getPositionBlock();
+	}
 
-const sf::FloatRect Brick::getGlobalBounds() const
-{
-	return sprite.getGlobalBounds();
-}
-
-void Brick::render(sf::RenderTarget* target)
-{
-	target->draw(sprite);
+	sprite.move(0.f, -velocity.y);
+	velocity.y = 0.f;
 }

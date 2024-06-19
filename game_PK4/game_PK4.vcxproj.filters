@@ -30,6 +30,39 @@
     <ClCompile Include="Brick.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Teleport.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Spikes.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Ghost.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Health.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Shadow.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="BossBullet.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameEngine.h">
@@ -42,6 +75,39 @@
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="Brick.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Teleport.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Spikes.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Ghost.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Health.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Shadow.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="BossBullet.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>
@@ -58,7 +124,37 @@
     <Image Include="images\teleport.png">
       <Filter>Pliki zasobów</Filter>
     </Image>
-    <Image Include="images\cegla.png">
+    <Image Include="images\Kolce.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="images\ghost.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="images\bullet.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="images\shadow.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="images\shield.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="images\health.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="images\fire-bullet.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="images\Boss.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="images\map3.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="images\landscape.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="images\Brick.png">
       <Filter>Pliki zasobów</Filter>
     </Image>
   </ItemGroup>

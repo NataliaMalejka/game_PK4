@@ -3,23 +3,14 @@
 #ifndef BRICK_H
 #define BRICK_H
 
+#include "Block.h"
 #include "Player.h"
 
-class Brick
+class Brick : public Block
 {
-private:
-	sf::Texture texture;
-	sf::Sprite sprite;
-	bool teleport;
-
 public:
-	Brick(const std::string& fileName, float x, float y, bool t);
-	virtual ~Brick();
-	const bool getTeleport();
-
-	const sf::FloatRect getGlobalBounds() const;
-
-	void render(sf::RenderTarget* target);
+	Brick(const float& x, const float& y);
+	void isIntersectsX(sf::Sprite& sprite, sf::Vector2f& velocity, bool& newMap, sf::Vector2f& beforeJump) override;
+	void isIntersectsY(sf::Sprite& sprite, sf::Vector2f& velocity, bool& newMap, bool& canJump, sf::Vector2f& beforeJump) override;
 };
-
-#endif
+#endif 
